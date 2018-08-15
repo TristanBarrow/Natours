@@ -3,7 +3,7 @@ const app = express();
 
 // This file is only here to make this project work at heroku.
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
