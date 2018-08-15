@@ -1,0 +1,27 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2.5rem) translate(-57%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0) translate(-57%);
+  }
+}
+
+@mixin moveInSide($name, $from) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateX($from);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
+
+
+@include moveInSide(moveInLeft, 5rem);
+@include moveInSide(moveInRight, -5rem);
